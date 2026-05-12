@@ -5,11 +5,11 @@ from src.pipeline import RAGPipeline
 
 
 BENCHMARK_QUERIES = [
-    # "How does the system handle peak load?",
-    # "What happens when a service becomes unavailable?",
+    "How does the system handle peak load?",
+    "What happens when a service becomes unavailable?",
     "How is data consistency maintained across nodes?",
-    # "What mechanisms prevent the system from being overwhelmed by requests?",
-    # "How does the system recover from failures?",
+    "What mechanisms prevent the system from being overwhelmed by requests?",
+    "How does the system recover from failures?",
 ]
 
 
