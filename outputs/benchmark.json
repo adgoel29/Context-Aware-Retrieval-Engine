@@ -1,5 +1,197 @@
 [
   {
+    "query": "How does the system handle peak load?",
+    "strategy_a": {
+      "strategy": "A",
+      "original_query": "How does the system handle peak load?",
+      "query_used_for_search": "How does the system handle peak load?",
+      "results": [
+        {
+          "rank": 1,
+          "chunk_id": 0,
+          "chunk_text": "A load balancer distributes incoming requests across multiple backend servers using strategies like round-robin, least-connections, or IP hash. This ensures no single server bears the full traffic burden. Health checks are run continuously to route requests only to healthy instances. Modern reverse proxies like NGINX or HAProxy can perform this request distribution at layer 4 or layer 7.",
+          "score": 0.432748019695282,
+          "metadata": {
+            "id": 0,
+            "topic": "load_balancing",
+            "chunk_text": "A load balancer distributes incoming requests across multiple backend servers using strategies like round-robin, least-connections, or IP hash. This ensures no single server bears the full traffic burden. Health checks are run continuously to route requests only to healthy instances. Modern reverse proxies like NGINX or HAProxy can perform this request distribution at layer 4 or layer 7."
+          }
+        },
+        {
+          "rank": 2,
+          "chunk_id": 1,
+          "chunk_text": "Horizontal scaling adds more compute instances when CPU or memory utilization crosses a defined threshold. An autoscaler monitors metrics and provisions new replicas automatically during traffic spikes. When demand drops, it terminates excess instances to reduce cost. Managed instance groups or Kubernetes HPA handle this compute provisioning without manual intervention.",
+          "score": 0.3878118395805359,
+          "metadata": {
+            "id": 1,
+            "topic": "autoscaling",
+            "chunk_text": "Horizontal scaling adds more compute instances when CPU or memory utilization crosses a defined threshold. An autoscaler monitors metrics and provisions new replicas automatically during traffic spikes. When demand drops, it terminates excess instances to reduce cost. Managed instance groups or Kubernetes HPA handle this compute provisioning without manual intervention."
+          }
+        },
+        {
+          "rank": 3,
+          "chunk_id": 6,
+          "chunk_text": "A circuit breaker monitors outgoing calls to a dependent service and tracks failure rates. When failures exceed a threshold, the circuit opens and subsequent calls are short-circuited immediately. This prevents a slow or failing downstream service from cascading failures to the entire system. After a cooldown period, the circuit enters a half-open state to test if the dependency has recovered.",
+          "score": 0.3402266800403595,
+          "metadata": {
+            "id": 6,
+            "topic": "circuit_breakers",
+            "chunk_text": "A circuit breaker monitors outgoing calls to a dependent service and tracks failure rates. When failures exceed a threshold, the circuit opens and subsequent calls are short-circuited immediately. This prevents a slow or failing downstream service from cascading failures to the entire system. After a cooldown period, the circuit enters a half-open state to test if the dependency has recovered."
+          }
+        }
+      ],
+      "top_k": 3
+    },
+    "strategy_b": {
+      "strategy": "B",
+      "original_query": "How does the system handle peak load?",
+      "expanded_query": "How does the infrastructure, application, or platform manage and cope with high traffic, burst load, or sudden spikes in demand? What mechanisms and strategies are employed to sustain performance, availability, and resilience under maximum capacity, overload conditions, or stress events? Describe the system's scalability (horizontal and vertical), load balancing, auto-scaling, rate limiting, caching, queuing, and other architectural patterns for handling peak concurrency. How is capacity planning conducted to ensure fault tolerance and efficient resource allocation during periods of high utilization?",
+      "query_used_for_search": "How does the infrastructure, application, or platform manage and cope with high traffic, burst load, or sudden spikes in demand? What mechanisms and strategies are employed to sustain performance, availability, and resilience under maximum capacity, overload conditions, or stress events? Describe the system's scalability (horizontal and vertical), load balancing, auto-scaling, rate limiting, caching, queuing, and other architectural patterns for handling peak concurrency. How is capacity planning conducted to ensure fault tolerance and efficient resource allocation during periods of high utilization?",
+      "results": [
+        {
+          "rank": 1,
+          "chunk_id": 1,
+          "chunk_text": "Horizontal scaling adds more compute instances when CPU or memory utilization crosses a defined threshold. An autoscaler monitors metrics and provisions new replicas automatically during traffic spikes. When demand drops, it terminates excess instances to reduce cost. Managed instance groups or Kubernetes HPA handle this compute provisioning without manual intervention.",
+          "score": 0.47015702724456787,
+          "metadata": {
+            "id": 1,
+            "topic": "autoscaling",
+            "chunk_text": "Horizontal scaling adds more compute instances when CPU or memory utilization crosses a defined threshold. An autoscaler monitors metrics and provisions new replicas automatically during traffic spikes. When demand drops, it terminates excess instances to reduce cost. Managed instance groups or Kubernetes HPA handle this compute provisioning without manual intervention."
+          }
+        },
+        {
+          "rank": 2,
+          "chunk_id": 5,
+          "chunk_text": "Rate limiting controls how many requests a client can make within a sliding time window. Token bucket and leaky bucket algorithms are widely used to enforce these request quotas. When a client exceeds its quota, the server returns a 429 Too Many Requests response. This protects backend services from being overwhelmed by bursty or abusive traffic patterns.",
+          "score": 0.4556117653846741,
+          "metadata": {
+            "id": 5,
+            "topic": "rate_limiting",
+            "chunk_text": "Rate limiting controls how many requests a client can make within a sliding time window. Token bucket and leaky bucket algorithms are widely used to enforce these request quotas. When a client exceeds its quota, the server returns a 429 Too Many Requests response. This protects backend services from being overwhelmed by bursty or abusive traffic patterns."
+          }
+        },
+        {
+          "rank": 3,
+          "chunk_id": 0,
+          "chunk_text": "A load balancer distributes incoming requests across multiple backend servers using strategies like round-robin, least-connections, or IP hash. This ensures no single server bears the full traffic burden. Health checks are run continuously to route requests only to healthy instances. Modern reverse proxies like NGINX or HAProxy can perform this request distribution at layer 4 or layer 7.",
+          "score": 0.4293988049030304,
+          "metadata": {
+            "id": 0,
+            "topic": "load_balancing",
+            "chunk_text": "A load balancer distributes incoming requests across multiple backend servers using strategies like round-robin, least-connections, or IP hash. This ensures no single server bears the full traffic burden. Health checks are run continuously to route requests only to healthy instances. Modern reverse proxies like NGINX or HAProxy can perform this request distribution at layer 4 or layer 7."
+          }
+        }
+      ],
+      "top_k": 3
+    },
+    "overlap": [
+      0,
+      1
+    ],
+    "unique_to_a": [
+      6
+    ],
+    "unique_to_b": [
+      5
+    ]
+  },
+  {
+    "query": "What happens when a service becomes unavailable?",
+    "strategy_a": {
+      "strategy": "A",
+      "original_query": "What happens when a service becomes unavailable?",
+      "query_used_for_search": "What happens when a service becomes unavailable?",
+      "results": [
+        {
+          "rank": 1,
+          "chunk_id": 6,
+          "chunk_text": "A circuit breaker monitors outgoing calls to a dependent service and tracks failure rates. When failures exceed a threshold, the circuit opens and subsequent calls are short-circuited immediately. This prevents a slow or failing downstream service from cascading failures to the entire system. After a cooldown period, the circuit enters a half-open state to test if the dependency has recovered.",
+          "score": 0.38317441940307617,
+          "metadata": {
+            "id": 6,
+            "topic": "circuit_breakers",
+            "chunk_text": "A circuit breaker monitors outgoing calls to a dependent service and tracks failure rates. When failures exceed a threshold, the circuit opens and subsequent calls are short-circuited immediately. This prevents a slow or failing downstream service from cascading failures to the entire system. After a cooldown period, the circuit enters a half-open state to test if the dependency has recovered."
+          }
+        },
+        {
+          "rank": 2,
+          "chunk_id": 7,
+          "chunk_text": "Message queues like Kafka or RabbitMQ decouple producers from consumers using an async publish-subscribe model. Producers write events to topics without waiting for consumers to process them. Consumers pull messages at their own pace, enabling backpressure handling and retry logic. Durable queues persist messages to disk so they survive broker restarts without data loss.",
+          "score": 0.32384082674980164,
+          "metadata": {
+            "id": 7,
+            "topic": "message_queues",
+            "chunk_text": "Message queues like Kafka or RabbitMQ decouple producers from consumers using an async publish-subscribe model. Producers write events to topics without waiting for consumers to process them. Consumers pull messages at their own pace, enabling backpressure handling and retry logic. Durable queues persist messages to disk so they survive broker restarts without data loss."
+          }
+        },
+        {
+          "rank": 3,
+          "chunk_id": 9,
+          "chunk_text": "A disaster recovery plan defines RTO (recovery time objective) and RPO (recovery point objective) targets. Automated failover routes traffic to a standby region when the primary region becomes unreachable. Periodic snapshot backups and cross-region replication minimize data loss during outages. Runbooks and chaos engineering drills ensure the team can execute recovery procedures under pressure.",
+          "score": 0.31298863887786865,
+          "metadata": {
+            "id": 9,
+            "topic": "disaster_recovery",
+            "chunk_text": "A disaster recovery plan defines RTO (recovery time objective) and RPO (recovery point objective) targets. Automated failover routes traffic to a standby region when the primary region becomes unreachable. Periodic snapshot backups and cross-region replication minimize data loss during outages. Runbooks and chaos engineering drills ensure the team can execute recovery procedures under pressure."
+          }
+        }
+      ],
+      "top_k": 3
+    },
+    "strategy_b": {
+      "strategy": "B",
+      "original_query": "What happens when a service becomes unavailable?",
+      "expanded_query": "What are the consequences, symptoms, detection methods, incident response procedures, impact, troubleshooting steps, and recovery processes when a service, application, microservice, or infrastructure component experiences an outage, downtime, failure, crash, unresponsiveness, error state, or becomes unavailable, offline, degraded, inaccessible, or out of service, including alerts, monitoring, fault detection, and potential effects on user experience, data integrity, and system performance?",
+      "query_used_for_search": "What are the consequences, symptoms, detection methods, incident response procedures, impact, troubleshooting steps, and recovery processes when a service, application, microservice, or infrastructure component experiences an outage, downtime, failure, crash, unresponsiveness, error state, or becomes unavailable, offline, degraded, inaccessible, or out of service, including alerts, monitoring, fault detection, and potential effects on user experience, data integrity, and system performance?",
+      "results": [
+        {
+          "rank": 1,
+          "chunk_id": 9,
+          "chunk_text": "A disaster recovery plan defines RTO (recovery time objective) and RPO (recovery point objective) targets. Automated failover routes traffic to a standby region when the primary region becomes unreachable. Periodic snapshot backups and cross-region replication minimize data loss during outages. Runbooks and chaos engineering drills ensure the team can execute recovery procedures under pressure.",
+          "score": 0.4512176811695099,
+          "metadata": {
+            "id": 9,
+            "topic": "disaster_recovery",
+            "chunk_text": "A disaster recovery plan defines RTO (recovery time objective) and RPO (recovery point objective) targets. Automated failover routes traffic to a standby region when the primary region becomes unreachable. Periodic snapshot backups and cross-region replication minimize data loss during outages. Runbooks and chaos engineering drills ensure the team can execute recovery procedures under pressure."
+          }
+        },
+        {
+          "rank": 2,
+          "chunk_id": 6,
+          "chunk_text": "A circuit breaker monitors outgoing calls to a dependent service and tracks failure rates. When failures exceed a threshold, the circuit opens and subsequent calls are short-circuited immediately. This prevents a slow or failing downstream service from cascading failures to the entire system. After a cooldown period, the circuit enters a half-open state to test if the dependency has recovered.",
+          "score": 0.43331873416900635,
+          "metadata": {
+            "id": 6,
+            "topic": "circuit_breakers",
+            "chunk_text": "A circuit breaker monitors outgoing calls to a dependent service and tracks failure rates. When failures exceed a threshold, the circuit opens and subsequent calls are short-circuited immediately. This prevents a slow or failing downstream service from cascading failures to the entire system. After a cooldown period, the circuit enters a half-open state to test if the dependency has recovered."
+          }
+        },
+        {
+          "rank": 3,
+          "chunk_id": 8,
+          "chunk_text": "Observability is achieved through three pillars: metrics, logs, and distributed traces. Prometheus scrapes time-series metrics from instrumented services and stores them for querying. Structured logs aggregated in systems like Elasticsearch or Loki allow root-cause analysis. Distributed tracing tools like Jaeger link spans across service boundaries to identify latency bottlenecks.",
+          "score": 0.40500882267951965,
+          "metadata": {
+            "id": 8,
+            "topic": "monitoring_observability",
+            "chunk_text": "Observability is achieved through three pillars: metrics, logs, and distributed traces. Prometheus scrapes time-series metrics from instrumented services and stores them for querying. Structured logs aggregated in systems like Elasticsearch or Loki allow root-cause analysis. Distributed tracing tools like Jaeger link spans across service boundaries to identify latency bottlenecks."
+          }
+        }
+      ],
+      "top_k": 3
+    },
+    "overlap": [
+      6,
+      9
+    ],
+    "unique_to_a": [
+      7
+    ],
+    "unique_to_b": [
+      8
+    ]
+  },
+  {
     "query": "How is data consistency maintained across nodes?",
     "strategy_a": {
       "strategy": "A",
@@ -45,14 +237,14 @@
     "strategy_b": {
       "strategy": "B",
       "original_query": "How is data consistency maintained across nodes?",
-      "expanded_query": "How is data consistency, data integrity, or the correctness of information maintained, ensured, guaranteed, or achieved across multiple nodes, distributed systems, clustered environments, replicated data stores, horizontally scaled architectures, or multi-replica setups? This includes methods for state synchronization, transaction management, conflict resolution, and the application of various consistency models like ACID properties (Atomicity, Consistency, Isolation, Durability), BASE properties (Basically Available, Soft state, Eventually consistent), strong consistency, eventual consistency, causal consistency, linearizability, serializability, or transactional consistency. What protocols, algorithms, or mechanisms, such as two-phase commit (2PC), three-phase commit (3PC), Paxos, Raft, quorum mechanisms, or distributed consensus, are employed to manage data integrity and ensure reliable state synchronization within a distributed infrastructure or multi-node setup?",
-      "query_used_for_search": "How is data consistency, data integrity, or the correctness of information maintained, ensured, guaranteed, or achieved across multiple nodes, distributed systems, clustered environments, replicated data stores, horizontally scaled architectures, or multi-replica setups? This includes methods for state synchronization, transaction management, conflict resolution, and the application of various consistency models like ACID properties (Atomicity, Consistency, Isolation, Durability), BASE properties (Basically Available, Soft state, Eventually consistent), strong consistency, eventual consistency, causal consistency, linearizability, serializability, or transactional consistency. What protocols, algorithms, or mechanisms, such as two-phase commit (2PC), three-phase commit (3PC), Paxos, Raft, quorum mechanisms, or distributed consensus, are employed to manage data integrity and ensure reliable state synchronization within a distributed infrastructure or multi-node setup?",
+      "expanded_query": "How is data consistency, data integrity, or transactional integrity maintained, preserved, or ensured across multiple nodes, distributed systems, replicated databases, or clusters? What are the mechanisms, protocols, and algorithms used to achieve data synchronization, state replication, and data coherence in multi-node environments? Explore methods for guaranteeing consistency models such as strong consistency, eventual consistency, causal consistency, or linearizability, considering ACID and BASE principles. This includes consensus algorithms like Paxos or Raft, distributed transaction management, two-phase commit (2PC), three-phase commit (3PC), quorum-based replication, conflict resolution strategies, and techniques for preserving data integrity and reliability in distributed architectures and high-availability setups.",
+      "query_used_for_search": "How is data consistency, data integrity, or transactional integrity maintained, preserved, or ensured across multiple nodes, distributed systems, replicated databases, or clusters? What are the mechanisms, protocols, and algorithms used to achieve data synchronization, state replication, and data coherence in multi-node environments? Explore methods for guaranteeing consistency models such as strong consistency, eventual consistency, causal consistency, or linearizability, considering ACID and BASE principles. This includes consensus algorithms like Paxos or Raft, distributed transaction management, two-phase commit (2PC), three-phase commit (3PC), quorum-based replication, conflict resolution strategies, and techniques for preserving data integrity and reliability in distributed architectures and high-availability setups.",
       "results": [
         {
           "rank": 1,
           "chunk_id": 3,
           "chunk_text": "Primary-replica replication keeps one writable leader node in sync with one or more read-only followers. Write-ahead logs are streamed to replicas to maintain consistency across nodes. In the event of leader failure, a replica can be promoted to maintain data availability. Eventual consistency models allow replicas to lag slightly, trading strict consistency for higher throughput.",
-          "score": 0.5131028890609741,
+          "score": 0.5762035846710205,
           "metadata": {
             "id": 3,
             "topic": "database_replication",
@@ -63,7 +255,7 @@
           "rank": 2,
           "chunk_id": 7,
           "chunk_text": "Message queues like Kafka or RabbitMQ decouple producers from consumers using an async publish-subscribe model. Producers write events to topics without waiting for consumers to process them. Consumers pull messages at their own pace, enabling backpressure handling and retry logic. Durable queues persist messages to disk so they survive broker restarts without data loss.",
-          "score": 0.3668815493583679,
+          "score": 0.42234766483306885,
           "metadata": {
             "id": 7,
             "topic": "message_queues",
@@ -72,13 +264,13 @@
         },
         {
           "rank": 3,
-          "chunk_id": 9,
-          "chunk_text": "A disaster recovery plan defines RTO (recovery time objective) and RPO (recovery point objective) targets. Automated failover routes traffic to a standby region when the primary region becomes unreachable. Periodic snapshot backups and cross-region replication minimize data loss during outages. Runbooks and chaos engineering drills ensure the team can execute recovery procedures under pressure.",
-          "score": 0.3633017838001251,
+          "chunk_id": 8,
+          "chunk_text": "Observability is achieved through three pillars: metrics, logs, and distributed traces. Prometheus scrapes time-series metrics from instrumented services and stores them for querying. Structured logs aggregated in systems like Elasticsearch or Loki allow root-cause analysis. Distributed tracing tools like Jaeger link spans across service boundaries to identify latency bottlenecks.",
+          "score": 0.40445443987846375,
           "metadata": {
-            "id": 9,
-            "topic": "disaster_recovery",
-            "chunk_text": "A disaster recovery plan defines RTO (recovery time objective) and RPO (recovery point objective) targets. Automated failover routes traffic to a standby region when the primary region becomes unreachable. Periodic snapshot backups and cross-region replication minimize data loss during outages. Runbooks and chaos engineering drills ensure the team can execute recovery procedures under pressure."
+            "id": 8,
+            "topic": "monitoring_observability",
+            "chunk_text": "Observability is achieved through three pillars: metrics, logs, and distributed traces. Prometheus scrapes time-series metrics from instrumented services and stores them for querying. Structured logs aggregated in systems like Elasticsearch or Loki allow root-cause analysis. Distributed tracing tools like Jaeger link spans across service boundaries to identify latency bottlenecks."
           }
         }
       ],
@@ -92,7 +284,199 @@
       2
     ],
     "unique_to_b": [
+      8
+    ]
+  },
+  {
+    "query": "What mechanisms prevent the system from being overwhelmed by requests?",
+    "strategy_a": {
+      "strategy": "A",
+      "original_query": "What mechanisms prevent the system from being overwhelmed by requests?",
+      "query_used_for_search": "What mechanisms prevent the system from being overwhelmed by requests?",
+      "results": [
+        {
+          "rank": 1,
+          "chunk_id": 5,
+          "chunk_text": "Rate limiting controls how many requests a client can make within a sliding time window. Token bucket and leaky bucket algorithms are widely used to enforce these request quotas. When a client exceeds its quota, the server returns a 429 Too Many Requests response. This protects backend services from being overwhelmed by bursty or abusive traffic patterns.",
+          "score": 0.5321604013442993,
+          "metadata": {
+            "id": 5,
+            "topic": "rate_limiting",
+            "chunk_text": "Rate limiting controls how many requests a client can make within a sliding time window. Token bucket and leaky bucket algorithms are widely used to enforce these request quotas. When a client exceeds its quota, the server returns a 429 Too Many Requests response. This protects backend services from being overwhelmed by bursty or abusive traffic patterns."
+          }
+        },
+        {
+          "rank": 2,
+          "chunk_id": 0,
+          "chunk_text": "A load balancer distributes incoming requests across multiple backend servers using strategies like round-robin, least-connections, or IP hash. This ensures no single server bears the full traffic burden. Health checks are run continuously to route requests only to healthy instances. Modern reverse proxies like NGINX or HAProxy can perform this request distribution at layer 4 or layer 7.",
+          "score": 0.4471415877342224,
+          "metadata": {
+            "id": 0,
+            "topic": "load_balancing",
+            "chunk_text": "A load balancer distributes incoming requests across multiple backend servers using strategies like round-robin, least-connections, or IP hash. This ensures no single server bears the full traffic burden. Health checks are run continuously to route requests only to healthy instances. Modern reverse proxies like NGINX or HAProxy can perform this request distribution at layer 4 or layer 7."
+          }
+        },
+        {
+          "rank": 3,
+          "chunk_id": 6,
+          "chunk_text": "A circuit breaker monitors outgoing calls to a dependent service and tracks failure rates. When failures exceed a threshold, the circuit opens and subsequent calls are short-circuited immediately. This prevents a slow or failing downstream service from cascading failures to the entire system. After a cooldown period, the circuit enters a half-open state to test if the dependency has recovered.",
+          "score": 0.33258968591690063,
+          "metadata": {
+            "id": 6,
+            "topic": "circuit_breakers",
+            "chunk_text": "A circuit breaker monitors outgoing calls to a dependent service and tracks failure rates. When failures exceed a threshold, the circuit opens and subsequent calls are short-circuited immediately. This prevents a slow or failing downstream service from cascading failures to the entire system. After a cooldown period, the circuit enters a half-open state to test if the dependency has recovered."
+          }
+        }
+      ],
+      "top_k": 3
+    },
+    "strategy_b": {
+      "strategy": "B",
+      "original_query": "What mechanisms prevent the system from being overwhelmed by requests?",
+      "expanded_query": "What mechanisms, techniques, strategies, or safeguards are employed to prevent, mitigate, or control an application, service, platform, or distributed system from becoming overwhelmed, overloaded, saturated, flooded, or degraded by an excessive volume of requests, traffic, queries, or API calls? This expanded query seeks information on congestion control, rate limiting, throttling, backpressure, load shedding, circuit breakers, flow control, queuing systems, message queues, resource management, concurrency limits, auto-scaling, and other resilience patterns designed to manage load, ensure system stability, high availability, and graceful degradation under peak or unexpected demand, thereby avoiding performance issues or service unavailability.",
+      "query_used_for_search": "What mechanisms, techniques, strategies, or safeguards are employed to prevent, mitigate, or control an application, service, platform, or distributed system from becoming overwhelmed, overloaded, saturated, flooded, or degraded by an excessive volume of requests, traffic, queries, or API calls? This expanded query seeks information on congestion control, rate limiting, throttling, backpressure, load shedding, circuit breakers, flow control, queuing systems, message queues, resource management, concurrency limits, auto-scaling, and other resilience patterns designed to manage load, ensure system stability, high availability, and graceful degradation under peak or unexpected demand, thereby avoiding performance issues or service unavailability.",
+      "results": [
+        {
+          "rank": 1,
+          "chunk_id": 5,
+          "chunk_text": "Rate limiting controls how many requests a client can make within a sliding time window. Token bucket and leaky bucket algorithms are widely used to enforce these request quotas. When a client exceeds its quota, the server returns a 429 Too Many Requests response. This protects backend services from being overwhelmed by bursty or abusive traffic patterns.",
+          "score": 0.6083475351333618,
+          "metadata": {
+            "id": 5,
+            "topic": "rate_limiting",
+            "chunk_text": "Rate limiting controls how many requests a client can make within a sliding time window. Token bucket and leaky bucket algorithms are widely used to enforce these request quotas. When a client exceeds its quota, the server returns a 429 Too Many Requests response. This protects backend services from being overwhelmed by bursty or abusive traffic patterns."
+          }
+        },
+        {
+          "rank": 2,
+          "chunk_id": 0,
+          "chunk_text": "A load balancer distributes incoming requests across multiple backend servers using strategies like round-robin, least-connections, or IP hash. This ensures no single server bears the full traffic burden. Health checks are run continuously to route requests only to healthy instances. Modern reverse proxies like NGINX or HAProxy can perform this request distribution at layer 4 or layer 7.",
+          "score": 0.519372284412384,
+          "metadata": {
+            "id": 0,
+            "topic": "load_balancing",
+            "chunk_text": "A load balancer distributes incoming requests across multiple backend servers using strategies like round-robin, least-connections, or IP hash. This ensures no single server bears the full traffic burden. Health checks are run continuously to route requests only to healthy instances. Modern reverse proxies like NGINX or HAProxy can perform this request distribution at layer 4 or layer 7."
+          }
+        },
+        {
+          "rank": 3,
+          "chunk_id": 7,
+          "chunk_text": "Message queues like Kafka or RabbitMQ decouple producers from consumers using an async publish-subscribe model. Producers write events to topics without waiting for consumers to process them. Consumers pull messages at their own pace, enabling backpressure handling and retry logic. Durable queues persist messages to disk so they survive broker restarts without data loss.",
+          "score": 0.4429130554199219,
+          "metadata": {
+            "id": 7,
+            "topic": "message_queues",
+            "chunk_text": "Message queues like Kafka or RabbitMQ decouple producers from consumers using an async publish-subscribe model. Producers write events to topics without waiting for consumers to process them. Consumers pull messages at their own pace, enabling backpressure handling and retry logic. Durable queues persist messages to disk so they survive broker restarts without data loss."
+          }
+        }
+      ],
+      "top_k": 3
+    },
+    "overlap": [
+      0,
+      5
+    ],
+    "unique_to_a": [
+      6
+    ],
+    "unique_to_b": [
+      7
+    ]
+  },
+  {
+    "query": "How does the system recover from failures?",
+    "strategy_a": {
+      "strategy": "A",
+      "original_query": "How does the system recover from failures?",
+      "query_used_for_search": "How does the system recover from failures?",
+      "results": [
+        {
+          "rank": 1,
+          "chunk_id": 9,
+          "chunk_text": "A disaster recovery plan defines RTO (recovery time objective) and RPO (recovery point objective) targets. Automated failover routes traffic to a standby region when the primary region becomes unreachable. Periodic snapshot backups and cross-region replication minimize data loss during outages. Runbooks and chaos engineering drills ensure the team can execute recovery procedures under pressure.",
+          "score": 0.5013060569763184,
+          "metadata": {
+            "id": 9,
+            "topic": "disaster_recovery",
+            "chunk_text": "A disaster recovery plan defines RTO (recovery time objective) and RPO (recovery point objective) targets. Automated failover routes traffic to a standby region when the primary region becomes unreachable. Periodic snapshot backups and cross-region replication minimize data loss during outages. Runbooks and chaos engineering drills ensure the team can execute recovery procedures under pressure."
+          }
+        },
+        {
+          "rank": 2,
+          "chunk_id": 6,
+          "chunk_text": "A circuit breaker monitors outgoing calls to a dependent service and tracks failure rates. When failures exceed a threshold, the circuit opens and subsequent calls are short-circuited immediately. This prevents a slow or failing downstream service from cascading failures to the entire system. After a cooldown period, the circuit enters a half-open state to test if the dependency has recovered.",
+          "score": 0.4580865502357483,
+          "metadata": {
+            "id": 6,
+            "topic": "circuit_breakers",
+            "chunk_text": "A circuit breaker monitors outgoing calls to a dependent service and tracks failure rates. When failures exceed a threshold, the circuit opens and subsequent calls are short-circuited immediately. This prevents a slow or failing downstream service from cascading failures to the entire system. After a cooldown period, the circuit enters a half-open state to test if the dependency has recovered."
+          }
+        },
+        {
+          "rank": 3,
+          "chunk_id": 7,
+          "chunk_text": "Message queues like Kafka or RabbitMQ decouple producers from consumers using an async publish-subscribe model. Producers write events to topics without waiting for consumers to process them. Consumers pull messages at their own pace, enabling backpressure handling and retry logic. Durable queues persist messages to disk so they survive broker restarts without data loss.",
+          "score": 0.3771575689315796,
+          "metadata": {
+            "id": 7,
+            "topic": "message_queues",
+            "chunk_text": "Message queues like Kafka or RabbitMQ decouple producers from consumers using an async publish-subscribe model. Producers write events to topics without waiting for consumers to process them. Consumers pull messages at their own pace, enabling backpressure handling and retry logic. Durable queues persist messages to disk so they survive broker restarts without data loss."
+          }
+        }
+      ],
+      "top_k": 3
+    },
+    "strategy_b": {
+      "strategy": "B",
+      "original_query": "How does the system recover from failures?",
+      "expanded_query": "How does the system, application, service, or infrastructure implement mechanisms for recovery from failures, outages, crashes, and disruptions? Explore the fault tolerance, high availability, resilience engineering, and disaster recovery strategies, processes, and procedures, including self-healing capabilities, failover solutions, rollback methods, and incident response plans, designed to restore functionality, maintain uptime, ensure business continuity, and mitigate service degradation following errors, malfunctions, data loss, or system breakdowns.",
+      "query_used_for_search": "How does the system, application, service, or infrastructure implement mechanisms for recovery from failures, outages, crashes, and disruptions? Explore the fault tolerance, high availability, resilience engineering, and disaster recovery strategies, processes, and procedures, including self-healing capabilities, failover solutions, rollback methods, and incident response plans, designed to restore functionality, maintain uptime, ensure business continuity, and mitigate service degradation following errors, malfunctions, data loss, or system breakdowns.",
+      "results": [
+        {
+          "rank": 1,
+          "chunk_id": 9,
+          "chunk_text": "A disaster recovery plan defines RTO (recovery time objective) and RPO (recovery point objective) targets. Automated failover routes traffic to a standby region when the primary region becomes unreachable. Periodic snapshot backups and cross-region replication minimize data loss during outages. Runbooks and chaos engineering drills ensure the team can execute recovery procedures under pressure.",
+          "score": 0.686458945274353,
+          "metadata": {
+            "id": 9,
+            "topic": "disaster_recovery",
+            "chunk_text": "A disaster recovery plan defines RTO (recovery time objective) and RPO (recovery point objective) targets. Automated failover routes traffic to a standby region when the primary region becomes unreachable. Periodic snapshot backups and cross-region replication minimize data loss during outages. Runbooks and chaos engineering drills ensure the team can execute recovery procedures under pressure."
+          }
+        },
+        {
+          "rank": 2,
+          "chunk_id": 6,
+          "chunk_text": "A circuit breaker monitors outgoing calls to a dependent service and tracks failure rates. When failures exceed a threshold, the circuit opens and subsequent calls are short-circuited immediately. This prevents a slow or failing downstream service from cascading failures to the entire system. After a cooldown period, the circuit enters a half-open state to test if the dependency has recovered.",
+          "score": 0.43874093890190125,
+          "metadata": {
+            "id": 6,
+            "topic": "circuit_breakers",
+            "chunk_text": "A circuit breaker monitors outgoing calls to a dependent service and tracks failure rates. When failures exceed a threshold, the circuit opens and subsequent calls are short-circuited immediately. This prevents a slow or failing downstream service from cascading failures to the entire system. After a cooldown period, the circuit enters a half-open state to test if the dependency has recovered."
+          }
+        },
+        {
+          "rank": 3,
+          "chunk_id": 8,
+          "chunk_text": "Observability is achieved through three pillars: metrics, logs, and distributed traces. Prometheus scrapes time-series metrics from instrumented services and stores them for querying. Structured logs aggregated in systems like Elasticsearch or Loki allow root-cause analysis. Distributed tracing tools like Jaeger link spans across service boundaries to identify latency bottlenecks.",
+          "score": 0.43216824531555176,
+          "metadata": {
+            "id": 8,
+            "topic": "monitoring_observability",
+            "chunk_text": "Observability is achieved through three pillars: metrics, logs, and distributed traces. Prometheus scrapes time-series metrics from instrumented services and stores them for querying. Structured logs aggregated in systems like Elasticsearch or Loki allow root-cause analysis. Distributed tracing tools like Jaeger link spans across service boundaries to identify latency bottlenecks."
+          }
+        }
+      ],
+      "top_k": 3
+    },
+    "overlap": [
+      6,
       9
+    ],
+    "unique_to_a": [
+      7
+    ],
+    "unique_to_b": [
+      8
     ]
   }
 ]
