@@ -1,0 +1,98 @@
+[
+  {
+    "query": "How is data consistency maintained across nodes?",
+    "strategy_a": {
+      "strategy": "A",
+      "original_query": "How is data consistency maintained across nodes?",
+      "query_used_for_search": "How is data consistency maintained across nodes?",
+      "results": [
+        {
+          "rank": 1,
+          "chunk_id": 3,
+          "chunk_text": "Primary-replica replication keeps one writable leader node in sync with one or more read-only followers. Write-ahead logs are streamed to replicas to maintain consistency across nodes. In the event of leader failure, a replica can be promoted to maintain data availability. Eventual consistency models allow replicas to lag slightly, trading strict consistency for higher throughput.",
+          "score": 0.48585987091064453,
+          "metadata": {
+            "id": 3,
+            "topic": "database_replication",
+            "chunk_text": "Primary-replica replication keeps one writable leader node in sync with one or more read-only followers. Write-ahead logs are streamed to replicas to maintain consistency across nodes. In the event of leader failure, a replica can be promoted to maintain data availability. Eventual consistency models allow replicas to lag slightly, trading strict consistency for higher throughput."
+          }
+        },
+        {
+          "rank": 2,
+          "chunk_id": 2,
+          "chunk_text": "An in-memory cache like Redis or Memcached stores frequently accessed data close to the application layer. Cache hits avoid expensive database round-trips, reducing both latency and backend load. TTL-based expiry and cache invalidation strategies keep data fresh. CDNs extend caching to the network edge, serving static assets from geographically close nodes.",
+          "score": 0.38887953758239746,
+          "metadata": {
+            "id": 2,
+            "topic": "caching",
+            "chunk_text": "An in-memory cache like Redis or Memcached stores frequently accessed data close to the application layer. Cache hits avoid expensive database round-trips, reducing both latency and backend load. TTL-based expiry and cache invalidation strategies keep data fresh. CDNs extend caching to the network edge, serving static assets from geographically close nodes."
+          }
+        },
+        {
+          "rank": 3,
+          "chunk_id": 7,
+          "chunk_text": "Message queues like Kafka or RabbitMQ decouple producers from consumers using an async publish-subscribe model. Producers write events to topics without waiting for consumers to process them. Consumers pull messages at their own pace, enabling backpressure handling and retry logic. Durable queues persist messages to disk so they survive broker restarts without data loss.",
+          "score": 0.3625122904777527,
+          "metadata": {
+            "id": 7,
+            "topic": "message_queues",
+            "chunk_text": "Message queues like Kafka or RabbitMQ decouple producers from consumers using an async publish-subscribe model. Producers write events to topics without waiting for consumers to process them. Consumers pull messages at their own pace, enabling backpressure handling and retry logic. Durable queues persist messages to disk so they survive broker restarts without data loss."
+          }
+        }
+      ],
+      "top_k": 3
+    },
+    "strategy_b": {
+      "strategy": "B",
+      "original_query": "How is data consistency maintained across nodes?",
+      "expanded_query": "How is data consistency, data integrity, or the correctness of information maintained, ensured, guaranteed, or achieved across multiple nodes, distributed systems, clustered environments, replicated data stores, horizontally scaled architectures, or multi-replica setups? This includes methods for state synchronization, transaction management, conflict resolution, and the application of various consistency models like ACID properties (Atomicity, Consistency, Isolation, Durability), BASE properties (Basically Available, Soft state, Eventually consistent), strong consistency, eventual consistency, causal consistency, linearizability, serializability, or transactional consistency. What protocols, algorithms, or mechanisms, such as two-phase commit (2PC), three-phase commit (3PC), Paxos, Raft, quorum mechanisms, or distributed consensus, are employed to manage data integrity and ensure reliable state synchronization within a distributed infrastructure or multi-node setup?",
+      "query_used_for_search": "How is data consistency, data integrity, or the correctness of information maintained, ensured, guaranteed, or achieved across multiple nodes, distributed systems, clustered environments, replicated data stores, horizontally scaled architectures, or multi-replica setups? This includes methods for state synchronization, transaction management, conflict resolution, and the application of various consistency models like ACID properties (Atomicity, Consistency, Isolation, Durability), BASE properties (Basically Available, Soft state, Eventually consistent), strong consistency, eventual consistency, causal consistency, linearizability, serializability, or transactional consistency. What protocols, algorithms, or mechanisms, such as two-phase commit (2PC), three-phase commit (3PC), Paxos, Raft, quorum mechanisms, or distributed consensus, are employed to manage data integrity and ensure reliable state synchronization within a distributed infrastructure or multi-node setup?",
+      "results": [
+        {
+          "rank": 1,
+          "chunk_id": 3,
+          "chunk_text": "Primary-replica replication keeps one writable leader node in sync with one or more read-only followers. Write-ahead logs are streamed to replicas to maintain consistency across nodes. In the event of leader failure, a replica can be promoted to maintain data availability. Eventual consistency models allow replicas to lag slightly, trading strict consistency for higher throughput.",
+          "score": 0.5131028890609741,
+          "metadata": {
+            "id": 3,
+            "topic": "database_replication",
+            "chunk_text": "Primary-replica replication keeps one writable leader node in sync with one or more read-only followers. Write-ahead logs are streamed to replicas to maintain consistency across nodes. In the event of leader failure, a replica can be promoted to maintain data availability. Eventual consistency models allow replicas to lag slightly, trading strict consistency for higher throughput."
+          }
+        },
+        {
+          "rank": 2,
+          "chunk_id": 7,
+          "chunk_text": "Message queues like Kafka or RabbitMQ decouple producers from consumers using an async publish-subscribe model. Producers write events to topics without waiting for consumers to process them. Consumers pull messages at their own pace, enabling backpressure handling and retry logic. Durable queues persist messages to disk so they survive broker restarts without data loss.",
+          "score": 0.3668815493583679,
+          "metadata": {
+            "id": 7,
+            "topic": "message_queues",
+            "chunk_text": "Message queues like Kafka or RabbitMQ decouple producers from consumers using an async publish-subscribe model. Producers write events to topics without waiting for consumers to process them. Consumers pull messages at their own pace, enabling backpressure handling and retry logic. Durable queues persist messages to disk so they survive broker restarts without data loss."
+          }
+        },
+        {
+          "rank": 3,
+          "chunk_id": 9,
+          "chunk_text": "A disaster recovery plan defines RTO (recovery time objective) and RPO (recovery point objective) targets. Automated failover routes traffic to a standby region when the primary region becomes unreachable. Periodic snapshot backups and cross-region replication minimize data loss during outages. Runbooks and chaos engineering drills ensure the team can execute recovery procedures under pressure.",
+          "score": 0.3633017838001251,
+          "metadata": {
+            "id": 9,
+            "topic": "disaster_recovery",
+            "chunk_text": "A disaster recovery plan defines RTO (recovery time objective) and RPO (recovery point objective) targets. Automated failover routes traffic to a standby region when the primary region becomes unreachable. Periodic snapshot backups and cross-region replication minimize data loss during outages. Runbooks and chaos engineering drills ensure the team can execute recovery procedures under pressure."
+          }
+        }
+      ],
+      "top_k": 3
+    },
+    "overlap": [
+      3,
+      7
+    ],
+    "unique_to_a": [
+      2
+    ],
+    "unique_to_b": [
+      9
+    ]
+  }
+]
